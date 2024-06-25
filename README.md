@@ -1,10 +1,17 @@
-# Index 1.9B Character
-本项目是一个支持Index-1.9B角色模型的推理框架，目前内置了`三三`的角色。
+# Index 1.9B Roleplay bot
+本项目是一个基于[Index-1.9B角色模型](https://github.com/bilibili/Index-1.9B/tree/main/roleplay)的角色扮演框架。
 
 # 🌏️ 下载模型权重
 下载以下模型到本地，并修改配置`config/config.json`
 * [bge-large-zh-v1.5](https://huggingface.co/BAAI/bge-large-zh-v1.5)
 * [Index-1.9B-Character](https://huggingface.co/IndexTeam/Index-1.9B-Character)
+
+* [tts-related-weights](https://drive.google.com/drive/folders/1v_PfMYlAnYdYA1UtuThYo_t_mTXq8ABO?usp=sharing)
+下载tts相关预训练权重，把`pretrained_models.tar.gz`解压之后放在`./GPT-SoVITS/GPT_SoVITS/pretrained_models`,分别把.pth和.ckpt文件放在`./GPT-SoVITS/SoVITS_weights`和`bingtang/GPT-SoVITS/GPT_weights`,最后形如这样
+
+    ![img](./git_src/image.png)
+
+
 
 # 🥳 配置环境
 1. 安装conda环境`conda create -n index python=3.10`
@@ -16,6 +23,7 @@
 # 🤩 使用
 
 ## 欢迎使用我们的demo
+* 先启动tts服务,`sh go.sh`
 * 请在命令行输入`python hf_based_demo.py`
     ![gradio demo](git_src/demo.png)
 
