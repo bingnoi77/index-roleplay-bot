@@ -44,7 +44,7 @@ def generate_tts(input_text):
         return response["message"]
 
 def update_model(role_name):
-    available_role = ['丁真','冰糖']
+    available_role = ['丁小真','冰糖']
     if role_name not in available_role:
         return ''
     url = 'http://127.0.0.1:4569/update_weights'
@@ -166,7 +166,9 @@ def regenerate(chat_history: List,role_name,role_desc, top_k, top_p, temperature
         chat_history[-1][1] = ""
     # apply chat template
     for answer in hf_gen(chat_history, role_name, top_k, top_p, temperature, repetition_penalty, max_dec_len):
-        chat_history[-1][1] = role_name + ":" + answer
+        tts_path = generate_tts(answer)
+        chat_history[-2][1] = role_name + ":" + answer
+        chat_history[-1][1] = (tts_path,)
         yield gr.update(value=""), chat_history
 
 
@@ -210,7 +212,7 @@ def main():
                 with gr.Row():
                     # role_name = gr.Textbox(label="Role name", placeholder="Input your rolename here!", lines=2, value="冰糖")
                     role_name = gr.Dropdown(
-                        ['冰糖','丁真','科比','龙玉涛'],value="冰糖"
+                        ['冰糖','丁小真','牢大','龙玉涛'],value="冰糖"
                     )
                 user_input = gr.Textbox(label="User", placeholder="Input your query here!", lines=2, interactive=True)
                 with gr.Row():
