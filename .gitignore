@@ -6,7 +6,7 @@ index_1_9b_chat
 character/
 
 # config
-config/
+# config/
 
 # system
 .env/
