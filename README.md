@@ -7,7 +7,7 @@
 * [Index-1.9B-Character](https://huggingface.co/IndexTeam/Index-1.9B-Character)
 
 * [tts-related-weights](https://drive.google.com/drive/folders/1v_PfMYlAnYdYA1UtuThYo_t_mTXq8ABO?usp=sharing)
-下载tts相关预训练权重，把`pretrained_models.tar.gz`解压之后放在`./GPT-SoVITS/GPT_SoVITS/pretrained_models`,分别把.pth和.ckpt文件放在`./GPT-SoVITS/SoVITS_weights`和`bingtang/GPT-SoVITS/GPT_weights`,最后形如这样
+下载tts相关预训练权重，把`pretrained_models.tar.gz`解压之后放在`./GPT-SoVITS/GPT_SoVITS/pretrained_models`,分别把.pth和.ckpt文件放在`./GPT-SoVITS/SoVITS_weights`和`./GPT-SoVITS/GPT_weights`,最后形如这样
 
     ![img](./git_src/image.png)
 
