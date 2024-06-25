@@ -144,8 +144,10 @@ def generate(chat_history: List, query, role_name, role_desc, top_k, top_p, temp
     chat_history.append([f"user:{query}", ""])
     for answer in hf_gen(chat_history, role_name, top_k, top_p, temperature, repetition_penalty, max_dec_len):
         chat_history[-1][1] = role_name + ":" + answer
-        tts_path = generate_tts(answer)
-        chat_history.append([None,(tts_path,)])
+        available_role = ['丁小真','冰糖']
+        if role_name in available_role:
+            tts_path = generate_tts(answer)
+            chat_history.append([None,(tts_path,)])
         yield gr.update(value=""), chat_history
 
 
@@ -166,9 +168,13 @@ def regenerate(chat_history: List,role_name,role_desc, top_k, top_p, temperature
         chat_history[-1][1] = ""
     # apply chat template
     for answer in hf_gen(chat_history, role_name, top_k, top_p, temperature, repetition_penalty, max_dec_len):
-        tts_path = generate_tts(answer)
-        chat_history[-2][1] = role_name + ":" + answer
-        chat_history[-1][1] = (tts_path,)
+        available_role = ['丁小真','冰糖']
+        if role_name in available_role:
+            tts_path = generate_tts(answer)
+            chat_history[-2][1] = role_name + ":" + answer
+            chat_history[-1][1] = (tts_path,)
+        else:
+            chat_history[-1][1] = role_name + ":" + answer
         yield gr.update(value=""), chat_history
 
 
