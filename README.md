@@ -1,5 +1,5 @@
 # Index 1.9B Roleplay bot
-本项目是一个基于[Index-1.9B角色模型](https://github.com/bilibili/Index-1.9B/tree/main/roleplay)的角色扮演框架,当前内置了`冰糖`,`丁小真`,`牢大`和`龙玉涛`。
+本项目是一个基于[Index-1.9B角色模型](https://github.com/bilibili/Index-1.9B/tree/main/roleplay)的角色扮演框架,当前内置了`冰糖`,`丁小真`,`牢大`和`龙玉涛`四个角色以及`冰糖`,`丁小真`的语音模型。
 
 # 🌏️ 下载模型权重
 下载以下模型到本地，并修改配置`config/config.json`
