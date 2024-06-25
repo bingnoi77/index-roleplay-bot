@@ -1,0 +1,30 @@
+# models
+bge-large-zh-v1.5
+index_1_9b_chat
+
+# roles
+character/
+
+# config
+config/
+
+# system
+.env/
+.idea/
+.ipynb_checkpoints
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+venv/
+
+# tts-related
+pretrained_models/
+*.pth
+*.ckpt
+*.wav
+
+# others
+boss_helper.py
+handle_data.ipynb
+question.txt
