@@ -28,7 +28,7 @@
     ![gradio demo](git_src/demo.png)
 
 * 使用指南
-    * 如果需要创建您自己的角色，请准备一个类似[character/三三.csv](character/三三.csv)的对话语料库（注意，文件名请与您要创建的角色名称保持一致）和对应角色的描述，点击`生成角色`即可创建成功。
+    * 如果需要创建您自己的角色，请准备一个类似[character/丁真.csv](character/丁真.csv)的对话语料库（注意，文件名请与您要创建的角色名称保持一致）和对应角色的描述，点击`生成角色`即可创建成功。
     * 如果已经创建好对应的角色，请您直接在Role name里输入您想对话的角色，并输入query，点击submit，即可对话。
 
 ## 针对实时对话要求
@@ -61,7 +61,7 @@ chatbox.infer_with_question_file("your_question_path")
 
 * 针对尚未支持的角色
 
-你需要先提供一个类似[character/三三.csv](character/三三.csv)的角色对话库以及对应的角色信息
+你需要先提供一个类似[character/丁真.csv](character/丁真.csv)的角色对话库以及对应的角色信息
 
 ```python
 from index_play import IndexRolePlay
