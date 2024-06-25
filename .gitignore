@@ -3,10 +3,10 @@ bge-large-zh-v1.5
 index_1_9b_chat
 
 # roles
-character/
+# character/
 
 # config
-config/
+# config/
 
 # system
 .env/
