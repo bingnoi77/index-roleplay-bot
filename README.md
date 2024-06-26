@@ -23,7 +23,7 @@
 ## 欢迎使用我们的demo
 * 先启动tts服务,`sh go.sh`
 * 请在命令行输入`python hf_based_demo.py`
-    ![gradio demo](git_src/demo.png)
+    ![gradio demo]()
 
 * 使用指南
     * 如果需要创建您自己的角色，请准备一个类似[character/丁小真.csv](character/丁小真.csv)的对话语料库（注意，文件名请与您要创建的角色名称保持一致）和对应角色的描述，点击`生成角色`即可创建成功。
